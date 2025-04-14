@@ -1,8 +1,11 @@
+import java.util.Scanner;
+
 public class Calculator {
     public static void main(String[] args) {
-        java.util.Scanner scanner = new java.util.Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         
         while (true) {
+            // Display calculator menu
             System.out.println("\nSimple Calculator Menu:");
             System.out.println("1. Add");
             System.out.println("2. Subtract");
@@ -13,16 +16,19 @@ public class Calculator {
             
             int choice = scanner.nextInt();
             
+            // Exit condition
             if (choice == 5) {
                 System.out.println("Thank you for using the calculator!");
                 break;
             }
             
+            // Validate menu selection
             if (choice < 1 || choice > 4) {
                 System.out.println("Invalid option! Please select 1-5.");
                 continue;
             }
             
+            // Get input numbers
             System.out.print("Enter first number: ");
             double num1 = scanner.nextDouble();
             
@@ -32,20 +38,21 @@ public class Calculator {
             double result = 0;
             String operation = "";
             
+            // Perform selected operation
             switch (choice) {
-                case 1:
+                case 1: // Addition
                     result = num1 + num2;
                     operation = "Addition";
                     break;
-                case 2:
+                case 2: // Subtraction
                     result = num1 - num2;
                     operation = "Subtraction";
                     break;
-                case 3:
+                case 3: // Multiplication
                     result = num1 * num2;
                     operation = "Multiplication";
                     break;
-                case 4:
+                case 4: // Division
                     if (num2 != 0) {
                         result = num1 / num2;
                         operation = "Division";
@@ -56,6 +63,7 @@ public class Calculator {
                     break;
             }
             
+            // Display result
             System.out.printf("%s result: %.2f\n", operation, result);
         }
         
