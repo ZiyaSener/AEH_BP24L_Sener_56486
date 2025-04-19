@@ -6,6 +6,10 @@ import java.util.Scanner;
  * 1. Iterative method
  * 2. Recursive method
  * It also measures and compares the execution time of both methods.
+ * 
+ * @author ZiyaSener
+ * @version 1.0
+ * @date 2025-04-19
  */
 public class Lab6 {
     public static void main(String[] args) {
@@ -28,6 +32,7 @@ public class Lab6 {
         
         // Display results
         System.out.println("\nFactorial of " + n + " = " + factorialIterative);
+        System.out.println("Recursive result: " + factorialRecursive + " (should be the same)");
         System.out.println("\nExecution Time Comparison:");
         System.out.println("Iterative Method: " + durationIterative + " nanoseconds");
         System.out.println("Recursive Method: " + durationRecursive + " nanoseconds");
